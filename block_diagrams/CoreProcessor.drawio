@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.16">
+  <diagram name="Page-1" id="ykPW-0tb7O_PSElfMsJm">
+    <mxGraphModel dx="1235" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qhxGmoUQZomFqNydpbpB-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="120" width="40" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="qhxGmoUQZomFqNydpbpB-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="120" width="40" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="qhxGmoUQZomFqNydpbpB-4" value="Fetch" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qhxGmoUQZomFqNydpbpB-5" value="Decode" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="690" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qhxGmoUQZomFqNydpbpB-6" value="Execute" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="930" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qhxGmoUQZomFqNydpbpB-7" value="Instruction Memory" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qhxGmoUQZomFqNydpbpB-8" value="Program Counter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="120" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="qhxGmoUQZomFqNydpbpB-9" value="Instruction Decoder" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="160" height="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
