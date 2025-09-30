@@ -11,34 +11,34 @@ module arthALU(
     reg C;
 
     always @(*) begin
-        case (op)
+        case (operation)
             3'b000: begin // Addition
-                {C, result} = d0 + d1;
-                V = (d0[31] == d1[31]) && (result[31] != d0[31]);
+                {C, ALUResult} = d0 + d1;
+                V = (d0[31] == d1[31]) && (ALUResult[31] != d0[31]);
             end
             3'b001: begin // Subtraction
-                {C, result} = d0 - d1;
-                V = (d0[31] != d1[31]) && (result[31] != d0[31]);
+                {C, ALUResult} = d0 - d1;
+                V = (d0[31] != d1[31]) && (ALUResult[31] != d0[31]);
             end
-            3'b010: result = d0 & d1;  // Bitwise AND
-            3'b011: result = d0 | d1;  // Bitwise OR
-            3'b100: result = d0 ^ d1;  // Bitwise XOR
-            3'b101: result = d0;     // Bitwise NOT (on a)
-            default: result = 32'b0; // Default case
+            3'b010: ALUResult = d0 & d1;  // Bitwise AND
+            3'b011: ALUResult = d0 | d1;  // Bitwise OR
+            3'b100: ALUResult = d0 ^ d1;  // Bitwise XOR
+            3'b101: ALUResult = d0;     // Bitwise NOT (on a)
+            default: ALUResult = 32'b0; // Default case
         endcase
     end
 
     always @(*) begin
         if (updateFlags) begin
             // N flag is set when 2s compliment of result is negative 
-            case (result[31])
+            case (ALUResult[31])
                 1'b0: ASPROut[31] = 1'b0;
                 1'b1: ASPROut[31] = 1'b1;
                 default: ASPROut[31] = 1'b0;
             endcase
 
             // Z flag is set when result is 0
-            case (result)
+            case (ALUResult)
                 32'b0: ASPROut[30] = 1'b1;
                 default: ASPROut[30] = 1'b0;
             endcase

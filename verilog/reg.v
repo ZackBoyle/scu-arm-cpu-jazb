@@ -1,4 +1,4 @@
-module reg(
+module register_32(
 	input [31:0] D, 
 	input we, 
 	input clk, 

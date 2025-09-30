@@ -15,22 +15,22 @@ module regfile(
     decoder4to16 writeAddrDecoder(.in(wr), .enable(we), .out(writeAddrDecoded)); // Decode write address
 
     // Reg module declarations
-    reg R0(.D(wd), .Q(rOut[0]), .we(writeAddrDecoded[0]), .clk(clk));
-    reg R1(.D(wd), .Q(rOut[1]), .we(writeAddrDecoded[1]), .clk(clk));
-    reg R2(.D(wd), .Q(rOut[2]), .we(writeAddrDecoded[2]), .clk(clk));
-    reg R3(.D(wd), .Q(rOut[3]), .we(writeAddrDecoded[3]), .clk(clk));
-    reg R4(.D(wd), .Q(rOut[4]), .we(writeAddrDecoded[4]), .clk(clk));
-    reg R5(.D(wd), .Q(rOut[5]), .we(writeAddrDecoded[5]), .clk(clk));
-    reg R6(.D(wd), .Q(rOut[6]), .we(writeAddrDecoded[6]), .clk(clk));
-    reg R7(.D(wd), .Q(rOut[7]), .we(writeAddrDecoded[7]), .clk(clk));
-    reg R8(.D(wd), .Q(rOut[8]), .we(writeAddrDecoded[8]), .clk(clk));
-    reg R9(.D(wd), .Q(rOut[9]), .we(writeAddrDecoded[9]), .clk(clk));
-    reg R10(.D(wd), .Q(rOut[10]), .we(writeAddrDecoded[10]), .clk(clk));
-    reg R11(.D(wd), .Q(rOut[11]), .we(writeAddrDecoded[11]), .clk(clk));
-    reg R12(.D(wd), .Q(rOut[12]), .we(writeAddrDecoded[12]), .clk(clk));
-    reg SP(.D(wd), .Q(rOut[13]), .we(writeAddrDecoded[13]), .clk(clk));
-    reg LR(.D(wd), .Q(rOut[14]), .we(writeAddrDecoded[14]), .clk(clk));
-    reg PC(.D(wd), .Q(rOut[15]), .we(writeAddrDecoded[15]), .clk(clk));
+    register_32 R0(.D(wd), .Q(rOut[0]), .we(writeAddrDecoded[0]), .clk(clk));
+    register_32 R1(.D(wd), .Q(rOut[1]), .we(writeAddrDecoded[1]), .clk(clk));
+    register_32 R2(.D(wd), .Q(rOut[2]), .we(writeAddrDecoded[2]), .clk(clk));
+    register_32 R3(.D(wd), .Q(rOut[3]), .we(writeAddrDecoded[3]), .clk(clk));
+    register_32 R4(.D(wd), .Q(rOut[4]), .we(writeAddrDecoded[4]), .clk(clk));
+    register_32 R5(.D(wd), .Q(rOut[5]), .we(writeAddrDecoded[5]), .clk(clk));
+    register_32 R6(.D(wd), .Q(rOut[6]), .we(writeAddrDecoded[6]), .clk(clk));
+    register_32 R7(.D(wd), .Q(rOut[7]), .we(writeAddrDecoded[7]), .clk(clk));
+    register_32 R8(.D(wd), .Q(rOut[8]), .we(writeAddrDecoded[8]), .clk(clk));
+    register_32 R9(.D(wd), .Q(rOut[9]), .we(writeAddrDecoded[9]), .clk(clk));
+    register_32 R10(.D(wd), .Q(rOut[10]), .we(writeAddrDecoded[10]), .clk(clk));
+    register_32 R11(.D(wd), .Q(rOut[11]), .we(writeAddrDecoded[11]), .clk(clk));
+    register_32 R12(.D(wd), .Q(rOut[12]), .we(writeAddrDecoded[12]), .clk(clk));
+    register_32 SP(.D(wd), .Q(rOut[13]), .we(writeAddrDecoded[13]), .clk(clk));
+    register_32 LR(.D(wd), .Q(rOut[14]), .we(writeAddrDecoded[14]), .clk(clk));
+    register_32 PC(.D(wd), .Q(rOut[15]), .we(writeAddrDecoded[15]), .clk(clk));
 
     // Read data logic
     always @(posedge clk) begin
